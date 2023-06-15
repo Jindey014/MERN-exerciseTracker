@@ -1,0 +1,17 @@
+.navbar {
+    width: 100vw;
+    display: flex;
+}
+
+.container-fluid {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.navbar-brand {
+    font-size: 30px;
+}
+
+.nav-item {
+    font-size: 20px;
+}
