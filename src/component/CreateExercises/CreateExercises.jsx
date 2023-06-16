@@ -4,6 +4,7 @@ import './CreateExercise.css'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import { useRef } from 'react'
+import axios from 'axios'
 
 const CreateExercises = (props) => {
   const [username, setUsername] = useState('')
@@ -23,7 +24,13 @@ const CreateExercises = (props) => {
     }
     window.location = '/'
     console.log(exercise)
+
+    axios
+      .post('http://localhost:5000/exercises/add', exercise)
+      .then((res) => console.log(res.data))
   }
+
+
 
   return (
     <div className="formContainer">

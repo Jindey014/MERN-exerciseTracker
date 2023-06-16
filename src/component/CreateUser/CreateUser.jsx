@@ -15,13 +15,13 @@ const CreateUser = (props) => {
     axios
       .post('http://localhost:5000/users/add', user)
       .then((res) => console.log(res.data))
-    //   .catch((err) => res.status(400).json('Error' + err))
+
     setUsername('')
   }
 
   return (
     <div className="formContainer">
-      <h3>Create New Exercise Log</h3>
+      <h3>Create New User</h3>
       <form className="row g-3" onSubmit={submitHandler}>
         <div className="col-12">
           <label className="form-label">Username</label>
